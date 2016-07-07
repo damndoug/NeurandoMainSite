@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Neurando.Repositories;
 
 namespace Neurando
 {
@@ -51,6 +52,14 @@ namespace Neurando
 
             app.UseMvc(routes =>
             {
+                foreach (var project in ProjectListData.ProjectData)
+                {
+                    routes.MapRoute(
+                        name: project.ProjectName,
+                        template: project.ProjectName,
+                        defaults: new { controller="Project", action="Detail", projectName=project.ProjectName });
+                }
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

@@ -1,0 +1,42 @@
+@model ProjectViewModel
+
+@{
+    ViewData["Title"] = "Connecting Ideas";
+}
+
+<div class="container portfolio-title">
+
+    <div class="text-center">
+        <h4>Released in <span>@Model.ProjectYearRelease</span></h4>
+    </div>
+    <div class="text-center">
+        <h1>@Model.ProjectTitle</h1>
+    </div>
+</div>
+
+<div class="container-fluid header-portfolio" style="background-image: url(@Model.ProjectImageUrl)">
+</div>
+
+<div class="container portfolio-body">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h3 class="text-center">Company</h3>
+        <p class="text-center">@Model.ProjectCompany</p>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <h3 class="text-center">URL</h3>
+        <a class="text-center" href="@Model.ProjectUrl" target="_blank"><p>@Model.ProjectUrl</p></a>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <h3 class="text-center">Brief</h3>
+        <p class="text-justify">@Model.ProjectBrief</p>        
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+        <h3 class="text-center">Technologies & Tools</h3>
+        <ul>
+            @foreach (string technology in Model.ProjectTechnologies)
+            {
+                <li>@technology</li>
+            }
+        </ul>
+    </div>
+</div>

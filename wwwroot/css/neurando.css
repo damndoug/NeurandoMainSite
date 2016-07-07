@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
 
 html,
 body {
@@ -85,41 +81,41 @@ aside {
     transition: all .35s;
 }
 
-    .navbar-default .navbar-header .navbar-brand {
-        text-transform: uppercase;
-        font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-        font-weight: 700;
-        color: #2980b9;
-    }
+.navbar-default .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 700;
+    color: #2980b9;
+}
 
-        .navbar-default .navbar-header .navbar-brand:hover,
-        .navbar-default .navbar-header .navbar-brand:focus {
-            color: #eb3812;
-        }
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #eb3812;
+}
 
-    .navbar-default .nav > li > a,
-    .navbar-default .nav > li > a:focus {
-        text-transform: uppercase;
-        font-size: 13px;
-        font-weight: 700;
-        color: #222;
-    }
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+}
 
-        .navbar-default .nav > li > a:hover,
-        .navbar-default .nav > li > a:focus:hover {
-            color: #2980b9;
-        }
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+    color: #2980b9;
+}
 
-    .navbar-default .nav > li.active > a,
-    .navbar-default .nav > li.active > a:focus {
-        color: #2980b9 !important;
-        background-color: transparent;
-    }
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
+    color: #2980b9 !important;
+    background-color: transparent;
+}
 
-        .navbar-default .nav > li.active > a:hover,
-        .navbar-default .nav > li.active > a:focus:hover {
-            background-color: transparent;
-        }
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
+    background-color: transparent;
+}
 
 @media(min-width:768px) {
     .navbar-default {
@@ -158,7 +154,7 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
+        color: #2980b9;
     }
 
     .navbar-default.affix .nav > li > a,
@@ -172,13 +168,12 @@ aside {
     }
 }
 
-header {
-    position: relative;
+.header-landing-page {
     width: 100%;
-    min-height: auto;
+    min-height: 100vh !important;
     text-align: center;
     color: #fff;
-    background-image: url(../images/header.jpg);
+    background-image: url("http://res.cloudinary.com/devneurando/image/upload/v1467848386/Neurando's%20Site/neurando-background2.png") !important;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -186,23 +181,14 @@ header {
     -o-background-size: cover;
 }
 
-header.header-background {
-    background-image: url(../images/header-about.jpg) !important;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-header .header-content {
+.header-landing-page .header-content {
     position: relative;
     width: 100%;
-    padding: 100px 15px;
+    top: 30vh;
     text-align: center;
 }
 
-header .header-content .header-content-inner h1 {
+.header-landing-page .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -210,25 +196,25 @@ header .header-content .header-content-inner h1 {
 
 }
 
-header .header-content .header-content-inner hr {
+.header-landing-page .header-content .header-content-inner hr {
     margin: 30px auto;
 }
 
-header .header-content .header-content-inner p {
+.header-landing-page .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,.7);
 }
 
-header .header-content .header-content-inner a {
+.header-landing-page .header-content .header-content-inner a {
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,.7);
     text-decoration: none;
 }
 
-header .header-content .header-content-inner a:visited {
+.header-landing-page .header-content .header-content-inner a:visited {
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,.7);
@@ -236,26 +222,25 @@ header .header-content .header-content-inner a:visited {
 
 
 @media(min-width:768px) {
-    header {
+    .header-landing-page {
         min-height: 100%;
     }
 
-    header .header-content {
+    .header-landing-page .header-content {
         position: absolute;
-        top: 50%;
-        padding: 0 50px;
+        top: 55vh;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
 
-    header .header-content .header-content-inner {
+    .header-landing-page .header-content .header-content-inner {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
     }
 
-    header .header-content .header-content-inner p {
+    .header-landing-page .header-content .header-content-inner p {
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
@@ -287,6 +272,10 @@ header .header-content .header-content-inner a:visited {
     position: relative;
     margin: 0 auto;
     max-width: 650px;
+}
+
+.with-border {
+    border: 1px solid #e9e9e9;
 }
 
 .portfolio-box .portfolio-box-caption {
@@ -497,4 +486,78 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: #222;
+}
+
+
+.contact label{
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.contact input {
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    outline: none;    
+    -moz-transition: .3s ease-in;
+    -o-transition: .3s ease-in; 
+    -webkit-transition: .3s ease-in;
+    transition: .3s ease-in;
+}
+
+.contact input:focus {
+    border-color: #3498db;
+}
+
+.contact textarea{
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    resize: none;
+    -moz-transition: .3s ease-in;
+    -o-transition: .3s ease-in; 
+    -webkit-transition: .3s ease-in;
+    transition: .3s ease-in;
+}
+
+.contact textarea:focus {
+    border-color: #3498db;
+}
+
+.contact button {
+    margin-top: 30px;
+}
+
+.neurando-footer {
+    height: 20vh;
+    background-color: #333;
+    color: #999;
+    font-family: 'Montserrat';
+    position: relative; /*this relative is needed to p stay at the bottom of the div*/
+}
+
+.neurando-footer .n-mark {
+    position: absolute;
+    bottom: 1px;
+    left: 46.5vw;
+    font-size: 15px;
+}
+
+.neurando-footer a {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #999;
+}
+
+.neurando-footer .row {
+    margin-top: 30px;
+    line-height: 30px;
 }

@@ -13,6 +13,9 @@ namespace Neurando.Controllers
     {
         public IActionResult Index()
         {
+
+            ViewBag.IsHome = true;
+
             return View();
         }
 
@@ -47,6 +50,11 @@ namespace Neurando.Controllers
             }
 
             return View("MailSent", sendEmailModel);
+        }
+
+        public IActionResult Status()
+        {
+            return Ok(new {douglas = "machão"});
         }
     }
 }
